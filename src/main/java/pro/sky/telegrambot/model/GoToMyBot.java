@@ -12,11 +12,11 @@ public class GoToMyBot {
     private Long id;
     private String message;
     private long chatId;
-    private LocalDateTime dataTime;
-    public GoToMyBot(String message, long chatId, LocalDateTime dataTime) {
+    private LocalDateTime dateTime;
+    public GoToMyBot(String message, long chatId, LocalDateTime dateTime) {
         this.message = message;
         this.chatId = chatId;
-        this.dataTime = dataTime;
+        this.dateTime = dateTime;
     }
     public GoToMyBot() {
 
@@ -46,11 +46,11 @@ public class GoToMyBot {
     }
 
     public LocalDateTime getDataTime() {
-        return dataTime;
+        return dateTime;
     }
 
     public void setDataTime(LocalDateTime dataTime) {
-        this.dataTime = dataTime;
+        this.dateTime = dataTime;
     }
 
     @Override
@@ -58,12 +58,12 @@ public class GoToMyBot {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         GoToMyBot goToMyBot = (GoToMyBot) o;
-        return chatId == goToMyBot.chatId && Objects.equals(id, goToMyBot.id) && Objects.equals(message, goToMyBot.message) && Objects.equals(dataTime, goToMyBot.dataTime);
+        return chatId == goToMyBot.chatId && Objects.equals(id, goToMyBot.id) && Objects.equals(message, goToMyBot.message) && Objects.equals(dateTime, goToMyBot.dateTime);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, message, chatId, dataTime);
+        return Objects.hash(id, message, chatId, dateTime);
     }
 
     @Override
@@ -72,7 +72,7 @@ public class GoToMyBot {
                 "id=" + id +
                 ", message='" + message + '\'' +
                 ", chatId=" + chatId +
-                ", dataTime=" + dataTime +
+                ", dataTime=" + dateTime +
                 '}';
     }
 }

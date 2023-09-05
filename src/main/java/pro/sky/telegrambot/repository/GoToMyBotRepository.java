@@ -9,5 +9,5 @@ import java.util.List;
 
 @Repository
 public interface GoToMyBotRepository extends JpaRepository<GoToMyBot, Long> {
-    List<GoToMyBot> findAllByDateTime(LocalDateTime localDateTime);
+    List<GoToMyBot> findByDateTime(LocalDateTime localDateTime);
 }
